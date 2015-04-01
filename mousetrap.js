@@ -874,6 +874,13 @@
             }
         };
 
+        /**
+         * exposes _characterFromEvent publicly
+         */
+        self.characterFromEvent = function(e) {
+            return _characterFromEvent.call(self, e);
+        };
+
         // start!
         _addEvent(targetElement, 'keypress', _handleKeyEvent);
         _addEvent(targetElement, 'keydown', _handleKeyEvent);
